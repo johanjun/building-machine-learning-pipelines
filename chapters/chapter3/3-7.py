@@ -60,7 +60,7 @@ for index, row in df.iterrows():
                 "issue": _bytes_feature(str(row["issue"])),
                 "sub_issue": _bytes_feature(str(row["sub_issue"])),
                 "state": _bytes_feature(str(row["state"])),
-                "zip_code": _int64_feature(convert_zipcode_to_int(row["zip_code"])),
+                "zip_code": _int64_feature(convert_zipcode_to_int(str(row["zip_code"]))),
                 "company": _bytes_feature(str(row["company"])),
                 "company_response": _bytes_feature(str(row["company_response"])),
                 "timely_response": _bytes_feature(str(row["timely_response"])),
